@@ -66,7 +66,7 @@ Bot Test page
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var userLang = navigator.language || navigator.userLanguage; 
-	
+	alert ("The language is: " + userLang);
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		if(userLang=="es-ES"){
