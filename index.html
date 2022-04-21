@@ -80,7 +80,7 @@ Bot Test page
 	console.log(userLang);
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
-		if(userLang=="es-ES"){
+		if(userLang=="es-ES" || userLang=="en-ES"){
 			embedded_svc.settings.language = 'es';
 		}else if(userLang=="pt-BR" || userLang=="pt_BR"){
 			embedded_svc.settings.language = 'pt_BR';
