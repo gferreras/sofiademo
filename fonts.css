@@ -4,4 +4,11 @@
 		     url("VisaDialectUI-Regular-Web.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
-	}
+}
+
+.VisaDialectUI-Regular-Web {
+    font-family: "Visa Dialect UI";
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
