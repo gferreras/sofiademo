@@ -42,6 +42,11 @@
            // Add hooks for mobile.
            addA11yHooks();
        }
+	window.addEventListener("message", (event) => {
+            // event.source is window.opener
+            // event.data is the content sent from child LWC
+            embedded_svc.postMessage("chasitor.sendMessage", event.data.message);
+          }, false);
 </script>	
 Bot Test page
 </head>
