@@ -72,18 +72,8 @@ Bot Test page
 	</div>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
-	//var userLang = navigator.language || navigator.userLanguage; 
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
-		/*if(userLang=="es-ES" || userLang=="en-ES"){
-			embedded_svc.settings.language = 'es';
-		}else if(userLang=="pt-BR" || userLang=="pt_BR"){
-			embedded_svc.settings.language = 'pt_BR';
-		}else if(userLang=="en-US" || userLang=="en_US"){
-			embedded_svc.settings.language = 'en-US';
-		}else{
-			embedded_svc.settings.language = '';
-		}*/
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US' 'en-US', 'pt_BR', 'es'
 		
 		//embedded_svc.settings.prechatBackgroundImgURL = "..." //360x100 pixels Pre-Chat Banner, Specify a URL to set an image in the pre-chat form below the header and above the fields.
