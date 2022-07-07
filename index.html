@@ -52,7 +52,7 @@ Bot Test page
 </head>
 <body onload="onBodyLoaded()">
    <div id="body-content">
-       <h1>Welcome to the test website Bot!</h1>
+       <h1>Welcome to the Sofia Bot-UST-ORG!</h1>
 	<style type='text/css'>
 		.embeddedServiceHelpButton .helpButton .uiButton {
 			background-color: #1434CB;
@@ -106,7 +106,10 @@ Bot Test page
 		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
-		//console.log("Paso por aqui");
+		
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+		
 		embedded_svc.settings.extraPrechatFormDetails = [ 
 		{
 			"label": "Last Name",
@@ -124,12 +127,10 @@ Bot Test page
 			"transcriptFields":[ "Email__c" ],
 			"displayToAgent": true
         	}];
-		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
-		embedded_svc.settings.entryFeature = 'LiveAgent';
-
+		
 		embedded_svc.init(
 			'https://visa-gateway--ust.my.salesforce.com',
-			'https://ust-visabenefits.cs173.force.com',
+			'https://ust-visabenefits.cs173.force.com/underwriter',
 			gslbBaseURL,
 			'00D7Y000000LAoI',
 			'Chat_Group',
