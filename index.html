@@ -76,6 +76,36 @@ Bot Test page
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = 'en-US'; //For example, enter 'en' or 'en-US' 'en-US', 'pt_BR', 'es'
 		var lang = embedded_svc.settings.language;
+		var firstNameEN = 'First Name';
+		var firstNameSP = 'Nombre';
+		var firstNamePT = 'Primeiro Nome';
+		var lastNameEN = 'Last Name';
+		var lastNameSP = 'Apellidos';
+		var lastNamePT = 'Sobrenome';
+		var languageEN = 'Language';
+		var languageSP = 'Idioma';
+		var languagePT = 'Idioma';
+		var varFirstName = '';
+		var varLastName = '';
+		var varLanguage = '';
+		if(lang=='en-US'){
+			varFirstName = firstNameEN;
+			varLastName = lastNameEN;
+			varLanguage = languageEN;
+		} else if (lang=='es'){
+			varFirstName = firstNameSP;
+			varLastName = lastNameSP;
+			varLanguage = languageSP;
+		} else if (lang=='pt_BR'){
+			varFirstName = firstNamePT;
+			varLastName = lastNamePT;
+			varLanguage = languagePT;	
+		}
+		console.log("lang: "+lang);
+		console.log("varFirstName: "+varFirstName);
+		console.log("varLastName: "+varLastName);
+		console.log("varLanguage: "+varLanguage);
+			
 		//embedded_svc.settings.prechatBackgroundImgURL = "..." //360x100 pixels Pre-Chat Banner, Specify a URL to set an image in the pre-chat form below the header and above the fields.
 		//embedded_svc.settings.smallCompanyLogoImgURL = 'https://images.prismic.io/prod-axa/40a8d53b-fd99-459a-9996-a88ba24e7f48_BoldChat+Icon.png' //36x36 pixels Logo for Header and Minimized Chat, Specify a URL to set the logo for the chat header and minimized chat.
 		embedded_svc.settings.smallCompanyLogoImgURL = 'https://images.prismic.io/prod-axa/63f9c13c-014a-4115-bff0-1ea3128dde25_Chatnegative24.png?auto=compress,format' //36x36 pixels Logo for Header and Minimized Chat, Specify a URL to set the logo for the chat header and minimized chat.
