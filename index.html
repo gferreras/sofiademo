@@ -83,28 +83,36 @@ Bot Test page
 		var lastNameEN = 'Last Name';
 		var lastNameSP = 'Apellidos';
 		var lastNamePT = 'Sobrenome';
+		var emailEN = 'Email';
+		var emailSP = 'Correo electrónico';
+		var emailPT = 'Email';
 		var languageEN = 'Language';
 		var languageSP = 'Idioma';
 		var languagePT = 'Idioma';
 		var varFirstName = '';
 		var varLastName = '';
 		var varLanguage = '';
+		var varEmail = '';
 		if(lang=='en-US'){
 			varFirstName = firstNameEN;
 			varLastName = lastNameEN;
 			varLanguage = languageEN;
+			varEmail = emailEN;
 		} else if (lang=='es'){
 			varFirstName = firstNameSP;
 			varLastName = lastNameSP;
 			varLanguage = languageSP;
+			varEmail = emailSP;
 		} else if (lang=='pt_BR'){
 			varFirstName = firstNamePT;
 			varLastName = lastNamePT;
-			varLanguage = languagePT;	
+			varLanguage = languagePT;
+			varEmail = emailPT;
 		}
 		console.log("lang: "+lang);
 		console.log("varFirstName: "+varFirstName);
 		console.log("varLastName: "+varLastName);
+		console.log("varEmail: "+varEmail);
 		console.log("varLanguage: "+varLanguage);
 			
 		//embedded_svc.settings.prechatBackgroundImgURL = "..." //360x100 pixels Pre-Chat Banner, Specify a URL to set an image in the pre-chat form below the header and above the fields.
@@ -140,7 +148,7 @@ Bot Test page
 			"transcriptFields":[ "FirstName__c" ],
 			"displayToAgent":true
         	},{
-			"label": "Email",
+			"label": varEmail,
 			"transcriptFields":[ "Email__c" ],
 			"displayToAgent":true
         	},{
