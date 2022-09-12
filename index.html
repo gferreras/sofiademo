@@ -94,24 +94,28 @@ Bot Test page
 		var varLanguage = '';
 		var varEmail = '';
 		var varTalk = '';
+		var varLanguageValue ='';
 		if(lang=='en-US'){
 			varFirstName = firstNameEN;
 			varLastName = lastNameEN;
 			varLanguage = languageEN;
 			varEmail = emailEN;
 			varTalk = 'Talk to Sofia';
+			varLanguageValue ='en-US';
 		} else if (lang=='es'){
 			varFirstName = firstNameSP;
 			varLastName = lastNameSP;
 			varLanguage = languageSP;
 			varEmail = emailSP;
 			varTalk = 'Hablar con Sofia';
+			varLanguageValue ='es';
 		} else if (lang=='pt_BR'){
 			varFirstName = firstNamePT;
 			varLastName = lastNamePT;
 			varLanguage = languagePT;
 			varEmail = emailPT;
 			varTalk = 'Falar com a Sofia';
+			varLanguageValue ='pt_BR';
 		}
 		console.log("lang: "+lang);
 		console.log("varFirstName: "+varFirstName);
@@ -158,6 +162,7 @@ Bot Test page
 			"displayToAgent":true
         	},{
 			"label": varLanguage,
+			"value": varLanguageValue,
 			"transcriptFields":[ "Language__c" ],
 			"displayToAgent":true
         	}];
