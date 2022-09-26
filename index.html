@@ -203,7 +203,6 @@ Bot Test page
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		console.log("s: "+s);
 		s.setAttribute('src', 'https://visa-gateway--ust.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
