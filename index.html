@@ -33,6 +33,13 @@
                embedded_svc.addEventHandler('afterMinimize', function(data) {
                    toggleInert(false);
                });
+		embedded_svc.addEventHandler('onChatRequestSuccess', function(data) {
+		   console.log("onChatRequestSuccess event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);	
+                   toggleInert(false);
+               });
+		embedded_svc.addEventHandler("onChatEstablished", function(data) {
+    		console.log("onChatEstablished event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);
+		});   
            }
  
            // Early out for desktop.
